@@ -40,7 +40,7 @@ public class Plugin : BasePlugin
         //     }
         // }
         //
-        // Log = base.Log;
+        Log = base.Log;
         // Log.LogInfo($"Debug Setting: [{IsDebug}]");
         //
         // if (!File.Exists($"{ModDir}/Locations.txt"))
