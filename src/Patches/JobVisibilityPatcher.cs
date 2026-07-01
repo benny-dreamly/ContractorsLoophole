@@ -40,3 +40,14 @@ public static class UnlockAllEquipmentPatch
         return false;
     }
 }
+
+//  SaveManager.CleanUpModeProgressRequired
+public static class AllowPlayingMultipleLevelsPatch
+{
+    [HarmonyPatch(typeof(SaveManager), "CleanUpModeProgressRequired"), HarmonyPrefix]
+    public static bool CleanUpModeProgressRequired_Prefix(ref bool __result)
+    {
+        __result = false;
+        return false;
+    }
+}
