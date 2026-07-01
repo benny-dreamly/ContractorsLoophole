@@ -4,6 +4,8 @@
         <TargetFramework>net48</TargetFramework>
         <AssemblyName>PowerwashSimAP</AssemblyName>
         <Product>PowerwashSimArchipelagoRandomizer</Product>
+        <AssemblyName>FreeLoadout</AssemblyName>
+        <Product>FreeLoadout</Product>
         <Version>0.6.0</Version>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>13</LangVersion>
