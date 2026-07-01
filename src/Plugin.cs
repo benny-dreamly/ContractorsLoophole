@@ -147,24 +147,24 @@ public class Plugin : BasePlugin
         // Harmony.CreateAndPatchAll(typeof(BuyPowerWasherPatch));
         Harmony.CreateAndPatchAll(typeof(UnlockAllEquipmentPatch));
 
-        if (IsDebug is DebugWant.Stats)
-        {
-            // Log.LogInfo(
-            //     $"\n{string.Join("\n", CleanParts.OrderBy(kv => kv.Value.Length).Select(kv => $"{SceneNameToLocationName[kv.Key]} has [{kv.Value.Length}] parts"))}");
-            // Log.LogInfo(
-            //     $"\n{string.Join("\n", CleanParts.OrderBy(kv => kv.Value.Length).Select(kv => $"{kv.Key} has [{kv.Value.Length}] parts"))}");
-            // Log.LogInfo($"Predicted total checks: [{(CleanParts.Sum(kv => 100 + kv.Value.Length)):###,###}]");
-
-            var pairs = CleanParts.OrderBy(kv => kv.Value.Length)
-                                  .Select(kv => (SceneNameToLocationName[kv.Key], kv.Value.Length))
-                                  .ToArray();
-            StringBuilder sb = new();
-            sb.Append("| Level Name | Part Count |\n");
-            sb.Append("|:-:|:-:|\n");
-            sb.Append(string.Join("\n", pairs.Select(pair => $"| {pair.Item1} | {pair.Length} |")));
-            sb.Append($"\n> Predicted total checks: [{CleanParts.Sum(kv => 100 + kv.Value.Length):###,###}]");
-            File.WriteAllText("stats.md", sb.ToString());
-        }
+        // if (IsDebug is DebugWant.Stats)
+        // {
+        //     // Log.LogInfo(
+        //     //     $"\n{string.Join("\n", CleanParts.OrderBy(kv => kv.Value.Length).Select(kv => $"{SceneNameToLocationName[kv.Key]} has [{kv.Value.Length}] parts"))}");
+        //     // Log.LogInfo(
+        //     //     $"\n{string.Join("\n", CleanParts.OrderBy(kv => kv.Value.Length).Select(kv => $"{kv.Key} has [{kv.Value.Length}] parts"))}");
+        //     // Log.LogInfo($"Predicted total checks: [{(CleanParts.Sum(kv => 100 + kv.Value.Length)):###,###}]");
+        //
+        //     var pairs = CleanParts.OrderBy(kv => kv.Value.Length)
+        //                           .Select(kv => (SceneNameToLocationName[kv.Key], kv.Value.Length))
+        //                           .ToArray();
+        //     StringBuilder sb = new();
+        //     sb.Append("| Level Name | Part Count |\n");
+        //     sb.Append("|:-:|:-:|\n");
+        //     sb.Append(string.Join("\n", pairs.Select(pair => $"| {pair.Item1} | {pair.Length} |")));
+        //     sb.Append($"\n> Predicted total checks: [{CleanParts.Sum(kv => 100 + kv.Value.Length):###,###}]");
+        //     File.WriteAllText("stats.md", sb.ToString());
+        // }
 
         Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
     }
