@@ -1,14 +1,9 @@
 ﻿using System;
-using System.IO;
-using System.Linq;
-using System.Text;
 using BepInEx;
 using BepInEx.IL2CPP;
 using BepInEx.Logging;
 using HarmonyLib;
-using PowerwashSimAP.Patches;
-using UnhollowerRuntimeLib;
-using static PowerwashSimAP.Locations;
+using FreeLoadout.Patches;
 
 namespace FreeLoadout;
 
