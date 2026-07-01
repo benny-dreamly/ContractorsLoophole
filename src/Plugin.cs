@@ -10,7 +10,7 @@ using PowerwashSimAP.Patches;
 using UnhollowerRuntimeLib;
 using static PowerwashSimAP.Locations;
 
-namespace PowerwashSimAP;
+namespace FreeLoadout;
 
 [BepInPlugin("FreeLoadout", "FreeLoadout", VersionNumber)]
 public class Plugin : BasePlugin

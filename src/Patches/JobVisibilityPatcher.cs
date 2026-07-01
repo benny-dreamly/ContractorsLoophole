@@ -4,7 +4,7 @@ using HarmonyLib;
 using PlayFab.Internal;
 using UnityEngine;
 
-namespace PowerwashSimAP.Patches;
+namespace FreeLoadout.Patches;
 
 public static class HasJobBeenPlayedPatch
 {
