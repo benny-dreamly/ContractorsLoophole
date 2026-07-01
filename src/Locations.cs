@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace PowerwashSimAP;
+namespace FreeLoadout;
 
 public static class Locations
 {

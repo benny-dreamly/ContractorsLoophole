@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace PowerwashSimAP.Patches;
+namespace FreeLoadout.Patches;
 
 public static class Helper
 {

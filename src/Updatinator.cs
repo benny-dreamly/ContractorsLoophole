@@ -3,7 +3,7 @@ using UnityEngine;
 using Action = System.Action;
 using NotImplementedException = System.NotImplementedException;
 
-namespace PowerwashSimAP;
+namespace FreeLoadout;
 
 public class Updatinator : MonoBehaviour
 {
