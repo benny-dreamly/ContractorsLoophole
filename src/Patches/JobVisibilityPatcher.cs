@@ -3,6 +3,7 @@ using PWS;
 using HarmonyLib;
 using PlayFab.Internal;
 using UnityEngine;
+using System;
 
 namespace FreeLoadout.Patches;
 
@@ -49,5 +50,33 @@ public static class AllowPlayingMultipleLevelsPatch
     {
         __result = false;
         return false;
+    }
+}
+
+public static class UnlockCanRefillPatch
+{
+    // Adjust "CleaningLiquidSaveDataManager" if it has a namespace or a slightly different name in your dumped assembly
+    [HarmonyPatch(typeof(CleaningLiquidSaveDataManager), "CanRefill"), HarmonyPrefix]
+    public static bool CanRefill_Prefix(ref bool __result)
+    {
+        // Force the method to return true
+        __result = true;
+        
+        // Skip the original function execution
+        return false;
+    }
+}
+
+public static class InfiniteLiquidDecreasePatch
+{
+    // Target the Decrease function on the CleaningLiquidSaveData class
+    [HarmonyPatch(typeof(CleaningLiquidSaveData), "Decrease"), HarmonyPrefix]
+    public static bool Decrease_Prefix(ref float deductedAmount)
+    {
+        // Force the amount to be deducted to 0
+        deductedAmount = 0f;
+        
+        // Return true to let the original method run with our modified 0 deduction
+        return true;
     }
 }

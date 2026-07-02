@@ -143,6 +143,7 @@ public class Plugin : BasePlugin
         // Harmony.CreateAndPatchAll(typeof(BuyPowerWasherPatch));
         Harmony.CreateAndPatchAll(typeof(UnlockAllEquipmentPatch));
         Harmony.CreateAndPatchAll(typeof(AllowPlayingMultipleLevelsPatch));
+        Harmony.CreateAndPatchAll(typeof(InfiniteLiquidDecreasePatch));
 
         // if (IsDebug is DebugWant.Stats)
         // {
