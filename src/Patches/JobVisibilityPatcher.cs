@@ -114,10 +114,10 @@ public static class UnlockAllLiquidsPostInitPatch
                     liquidSaveData.m_internalAmount = 100.0f;
 
                     // Give the player at least 1 bottle so it lights up on the selection menu
-                    if (liquidSaveData.m_internalBottlesInInventory <= 0)
-                    {
-                        liquidSaveData.m_internalBottlesInInventory = 1;
-                    }
+                    // if (liquidSaveData.m_internalBottlesInInventory <= 0)
+                    // {
+                    //     liquidSaveData.m_internalBottlesInInventory = 1;
+                    // }
 
                     // Turn on the unlimited flag to ensure it doesn't deplete out of bottles
                     liquidSaveData._UnlimitedBottles_k__BackingField = true;
