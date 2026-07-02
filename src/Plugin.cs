@@ -144,6 +144,8 @@ public class Plugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(UnlockAllEquipmentPatch));
         Harmony.CreateAndPatchAll(typeof(AllowPlayingMultipleLevelsPatch));
         Harmony.CreateAndPatchAll(typeof(InfiniteLiquidDecreasePatch));
+        Harmony.CreateAndPatchAll(typeof(MinimumLitersPatch));
+        Harmony.CreateAndPatchAll(typeof(UnlockAllLiquidsPostInitPatch));
 
         // if (IsDebug is DebugWant.Stats)
         // {

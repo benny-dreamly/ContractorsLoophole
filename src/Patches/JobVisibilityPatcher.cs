@@ -80,3 +80,49 @@ public static class InfiniteLiquidDecreasePatch
         return true;
     }
 }
+
+public static class MinimumLitersPatch
+{
+    // Target the get_Liters property getter on the CleaningLiquidSaveData class
+    [HarmonyPatch(typeof(CleaningLiquidSaveData), "get_Liters"), HarmonyPostfix]
+    public static void get_Liters_Postfix(ref float __result)
+    {
+        // Check if the calculated liters value is 0 or less
+        if (__result <= 0f)
+        {
+            // Force it to be 1 liter (or something greater than 0)
+            __result = 1.0f;
+        }
+    }
+}
+
+public static class UnlockAllLiquidsPostInitPatch
+{
+    // Target the initialization function for non-career mode loadouts
+    [HarmonyPatch(typeof(CleaningLiquidSaveDataManager), "InitialiseNonCareerLoadout"), HarmonyPostfix]
+    public static void InitialiseNonCareerLoadout_Postfix(CleaningLiquidSaveDataManager __instance)
+    {
+        // Safety check to ensure the instance and its internal list exist
+        if (__instance != null && __instance.m_liquids != null)
+        {
+            // Loop through every single fluid data structure the game just initialized
+            foreach (var liquidSaveData in __instance.m_liquids)
+            {
+                if (liquidSaveData != null)
+                {
+                    // Force the internal fluid amount to 100%
+                    liquidSaveData.m_internalAmount = 100.0f;
+
+                    // Give the player at least 1 bottle so it lights up on the selection menu
+                    if (liquidSaveData.m_internalBottlesInInventory <= 0)
+                    {
+                        liquidSaveData.m_internalBottlesInInventory = 1;
+                    }
+
+                    // Turn on the unlimited flag to ensure it doesn't deplete out of bottles
+                    liquidSaveData._UnlimitedBottles_k__BackingField = true;
+                }
+            }
+        }
+    }
+}
