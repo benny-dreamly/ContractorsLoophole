@@ -3,7 +3,7 @@ using BepInEx;
 using BepInEx.IL2CPP;
 using BepInEx.Logging;
 using HarmonyLib;
-using FreeLoadout.Patches;
+using ContractorsLoophole.Patches;
 using UnhollowerRuntimeLib;
 
 namespace ContractorsLoophole;
