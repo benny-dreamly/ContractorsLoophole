@@ -19,8 +19,8 @@ This mod has been somewhat cannibalized from SWCreeperKing's Powerwash AP mod.
 - Extract the BepInEx zip folder you downloaded from the previous step into your game's install directory (For example: C:\Program Files (x86)\Steam\steamapps\common\PowerWash Simulator)
   - the contents from the extraction: BepinEx, mono, changelog, doorstop_config, winhttp.dll should be in the same directory as the game
 - Launch the game and close it. This will finalize the BepInEx installation.
-- Download and extract the `FreeLoadout.Zip` from the [latest release page](https://github.com/benny-dreamly/PowerwashSimAP/releases/latest).
-    - Copy the `FreeLoadout` folder from the release zip into `BepInEx/plugins` under your game's install directory.
+- Download and extract the `ContractorsLoophole.Zip` from the [latest release page](https://github.com/benny-dreamly/ContractorsLoophole/releases/latest).
+    - Copy the `ContractorsLoophole` folder from the release zip into `BepInEx/plugins` under your game's install directory.
     - If there is no `BepInEx/plugins` folder: 
       - try running as administrator
       - if using linux/wine: type "WINEDLLOVERRIDES="winhttp=n,b" %command%" into launch options
@@ -32,14 +32,4 @@ This mod has been somewhat cannibalized from SWCreeperKing's Powerwash AP mod.
 
 # Special Thanks
 
-- Silent for programming support
-- BadMagic for telling me about IlRepack
-
----
-
-# Tools:
-
-- BepInEx (obv)
-- Rider
-- ILRepacker
-- UnityExplorer
+- SW_CreeperKing for their wonderful AP mod that this mod is based on
