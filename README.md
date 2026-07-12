@@ -1,3 +1,5 @@
+# Contractor's Loophole
+
 This mod has been somewhat cannibalized from SWCreeperKing's Powerwash AP mod. 
 
 ## Features
