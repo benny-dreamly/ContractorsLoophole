@@ -1,6 +1,6 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerwashSimAP", "PowerwashSimAP.csproj", "{C60E8F3A-51D5-468F-9770-13EA5B092FE3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContractorsLoophole", "ContractorsLoophole.csproj", "{C60E8F3A-51D5-468F-9770-13EA5B092FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
