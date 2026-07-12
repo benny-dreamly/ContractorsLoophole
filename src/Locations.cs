@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace FreeLoadout;
+namespace ContractorsLoophole;
 
 public static class Locations
 {

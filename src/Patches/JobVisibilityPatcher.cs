@@ -5,7 +5,7 @@ using PlayFab.Internal;
 using UnityEngine;
 using System;
 
-namespace FreeLoadout.Patches;
+namespace ContractorsLoophole.Patches;
 
 public static class HasJobBeenPlayedPatch
 {

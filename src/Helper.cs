@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FreeLoadout.Patches;
+namespace ContractorsLoophole.Patches;
 
 public static class Helper
 {

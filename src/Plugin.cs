@@ -6,7 +6,7 @@ using HarmonyLib;
 using FreeLoadout.Patches;
 using UnhollowerRuntimeLib;
 
-namespace FreeLoadout;
+namespace ContractorsLoophole;
 
 [BepInPlugin("ContractorsLoophole", "ContractorsLoophole", VersionNumber)]
 public class Plugin : BasePlugin

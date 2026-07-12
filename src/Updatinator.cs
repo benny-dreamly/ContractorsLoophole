@@ -3,7 +3,7 @@ using UnityEngine;
 using Action = System.Action;
 using NotImplementedException = System.NotImplementedException;
 
-namespace FreeLoadout;
+namespace ContractorsLoophole;
 
 public class Updatinator : MonoBehaviour
 {
