@@ -8,11 +8,11 @@ using UnhollowerRuntimeLib;
 
 namespace FreeLoadout;
 
-[BepInPlugin("FreeLoadout", "FreeLoadout", VersionNumber)]
+[BepInPlugin("ContractorsLoophole", "ContractorsLoophole", VersionNumber)]
 public class Plugin : BasePlugin
 {
     public const string VersionNumber = "v1.0.0";
-    public const string ModDir = "BepInEx/plugins/FreeLoadout";
+    public const string ModDir = "BepInEx/plugins/ContractorsLoophole";
 
     public enum DebugWant
     {
