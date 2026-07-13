@@ -26,6 +26,13 @@ public static class FreePlayUnlockPatch
     [HarmonyPatch(typeof(CampaignSaveData), "IsFreePlayUnlocked"), HarmonyPrefix]
     static bool IsFreePlayUnlocked_Prefix(ref bool __result)
     {
+        // Check if the user enabled the setting. If they DID NOT, skip our mod logic.
+        if (!Plugin.ConfigFreePlayUnlock.Value)
+        {
+            return true; // Return true to let the original game method run normally
+        }
+        
+        // If the config IS true, this code runs:
         __result = true;  // All jobs unlocked, period
         return false;     // Skip original method entirely
     }

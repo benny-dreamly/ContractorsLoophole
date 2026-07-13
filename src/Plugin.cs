@@ -2,6 +2,7 @@
 using BepInEx;
 using BepInEx.IL2CPP;
 using BepInEx.Logging;
+using BepInEx.Configuration;
 using HarmonyLib;
 using ContractorsLoophole.Patches;
 using UnhollowerRuntimeLib;
@@ -27,6 +28,9 @@ public class Plugin : BasePlugin
 
     public static DebugWant IsDebug = DebugWant.None;
     public new static ManualLogSource Log;
+    
+    // Define the config entry here so the patch can see it
+    public static ConfigEntry<bool> ConfigFreePlayUnlock;
 
     public static event EventHandler<Plugin> Unloaded;
 
@@ -34,9 +38,13 @@ public class Plugin : BasePlugin
     {
         Log = base.Log;
         
+        // Set up the configuration setting
+        // "General" is the section, "UnlockFreePlay" is the key name, false is the default value
+        ConfigFreePlayUnlock = Config.Bind("General", "UnlockFreePlay", false, "If true, all Free Play jobs will be instantly unlocked.");
+        
         ClassInjector.RegisterTypeInIl2Cpp<Updatinator>();
         // Harmony.CreateAndPatchAll(typeof(HasJobBeenPlayedPatch));
-        // Harmony.CreateAndPatchAll(typeof(FreePlayUnlockPatch));
+        Harmony.CreateAndPatchAll(typeof(FreePlayUnlockPatch));
         Harmony.CreateAndPatchAll(typeof(UnlockAllEquipmentPatch));
         Harmony.CreateAndPatchAll(typeof(AllowPlayingMultipleLevelsPatch));
         // Harmony.CreateAndPatchAll(typeof(InfiniteLiquidDecreasePatch));
