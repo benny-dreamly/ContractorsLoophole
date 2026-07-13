@@ -13,7 +13,7 @@ This mod has been somewhat cannibalized from SWCreeperKing's Powerwash AP mod.
 
 
 ## How to install
-(tutorial totally not copy and pasted from Tunic AP mod)
+(tutorial borrowed from SW_CreeperKing's Powerwash AP mod)
 
 - Download [BepInEx 6.0.0-pre1](https://github.com/BepInEx/BepInEx/releases/download/v6.0.0-pre.1/BepInEx_UnityIL2CPP_x64_6.0.0-pre.1.zip).
 - Extract the BepInEx zip folder you downloaded from the previous step into your game's install directory (For example: C:\Program Files (x86)\Steam\steamapps\common\PowerWash Simulator)
@@ -26,7 +26,7 @@ This mod has been somewhat cannibalized from SWCreeperKing's Powerwash AP mod.
       - if using linux/wine: type "WINEDLLOVERRIDES="winhttp=n,b" %command%" into launch options
       - check to see if your antivirus or something else that maybe interfering with BepInEx
 - Launch the game again and you should see the connection input on the top left of the title screen!
-- To uninstall the mod, either remove/delete the `FreeLoadout` folder from the plugins folder or rename the winhttp.dll file located in the game's root directory (this will disable all installed mods from running).
+- To uninstall the mod, either remove/delete the `ContractorsLoophole` folder from the plugins folder or rename the winhttp.dll file located in the game's root directory (this will disable all installed mods from running).
 
 ---
 
